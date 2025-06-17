@@ -1,0 +1,51 @@
+# Proxy Strategy Explanation
+
+## Objective
+
+This project explores a beginner-friendly trading strategy using a **proxy investment approach** where instead of trading Bitcoin (BTC) directly, we observe and trade **publicly listed companies** with high exposure to BTC price movements.
+
+The two companies used:
+- **MSTR** (MicroStrategy, traded in USD) — known for holding large amounts of Bitcoin.
+- **MTPLF** (Metaplanet, traded in JPY) — a Japanese firm that announced Bitcoin adoption and is seen as a "Bitcoin proxy" in Asia.
+
+## Strategy
+
+1. **Bitcoin as the Leading Indicator**:
+   - We calculate the **Relative Strength Index (RSI)** of Bitcoin using a 14-day window.
+   - RSI thresholds:
+     - RSI < 40 → **ENTRY** signal
+     - RSI > 70 → **EXIT** signal
+   - These thresholds are used to simulate buy/sell decisions.
+
+2. **Proxy Trading**:
+   - Instead of trading Bitcoin, we simulate trades on MSTR and MTPLF stocks on the same dates.
+   - The assumption is that these companies' stock prices are positively correlated with BTC.
+
+3. **Backtesting**:
+   - The script `03_backtest_signals.R` pairs ENTRY and EXIT signals.
+   - It computes:
+     - Entry/exit dates
+     - Holding period (days)
+     - Return percentage
+   - Results are saved as `BTC_RSI_Backtest.xlsx`.
+
+## Why This Approach?
+
+- **Regulatory Simplicity**: Easier for beginners or those without access to crypto exchanges.
+- **Stock Market Familiarity**: Useful if you are more comfortable trading equities than crypto.
+- **Leverage Public Sentiment**: Stock prices of proxy firms often move with public sentiment around Bitcoin.
+
+## Limitations
+
+- **Indirect Exposure**: You're not holding BTC, so returns may differ due to company-specific risks.
+- **Currency Risk**: MTPLF is in JPY, which introduces FX risk for USD-based investors.
+- **Signal Lag**: RSI is a lagging indicator; signals may be delayed compared to real-time sentiment shifts.
+
+## Summary
+
+This is a simple but insightful project showing how you can:
+- Use ChatGPT to guide you through a trading idea.
+- Collect, clean, and analyze financial data in R.
+- Backtest a strategy on stocks as proxies for crypto movement.
+
+It's a great starting point for those new to quantitative investing and open-source finance.
