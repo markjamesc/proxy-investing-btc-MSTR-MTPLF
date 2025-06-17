@@ -1,0 +1,94 @@
+# Future Metrics to Explore Beyond RSI
+
+As you build on this project and refine your trading strategy, it's important to incorporate additional indicators and metrics to evaluate price movements, trend strength, and market sentiment beyond RSI (Relative Strength Index). Below is a categorized list of powerful metrics worth exploring, along with brief descriptions and usage tips.
+
+---
+
+## 📈 Momentum & Oscillator Indicators
+
+### 1. **MACD (Moving Average Convergence Divergence)**
+- **What**: Measures the relationship between two moving averages.
+- **Use**: Entry/exit based on MACD crossing the signal line.
+- **Strength**: Works well for identifying trend reversals.
+
+### 2. **Stochastic Oscillator**
+- **What**: Compares a closing price to its price range over a period.
+- **Use**: Detects overbought/oversold conditions.
+- **Strength**: More sensitive than RSI, often used with it.
+
+---
+
+## 📊 Trend Strength Indicators
+
+### 3. **ADX (Average Directional Index)**
+- **What**: Measures trend strength regardless of direction.
+- **Use**: ADX > 25 = strong trend; ADX < 20 = weak trend.
+- **Strength**: Helps filter signals in choppy markets.
+
+### 4. **Bollinger Bands**
+- **What**: Bands around a moving average based on volatility.
+- **Use**: Price touching or crossing bands can indicate potential reversals.
+- **Strength**: Good for range-bound market detection.
+
+---
+
+## 🧠 Machine Learning Features (Advanced)
+
+### 5. **Lagged Returns / Rolling Stats**
+- **What**: Lagged % returns, rolling volatility, mean reversion signals.
+- **Use**: Feed into ML models or develop custom strategies.
+- **Strength**: Supports pattern discovery and predictive modeling.
+
+### 6. **Sentiment Data (if available)**
+- **What**: Crypto Twitter, Reddit, Google Trends.
+- **Use**: Monitor hype cycles and retail mood.
+- **Strength**: Anticipates short-term market surges or panics.
+
+---
+
+## 🔁 Volume & Market Dynamics
+
+### 7. **On-Balance Volume (OBV)**
+- **What**: Measures cumulative volume that confirms price trends.
+- **Use**: Confirms breakouts or reveals divergences.
+- **Strength**: Adds volume insight to price analysis.
+
+### 8. **Volume Moving Averages**
+- **What**: Moving averages of trading volume.
+- **Use**: Spot unusual activity, e.g. spikes on ENTRY signals.
+
+---
+
+## 🪙 Crypto-Specific Metrics
+
+### 9. **Funding Rates (for derivatives)**
+- **What**: Rate paid between long and short positions.
+- **Use**: Extremely negative/positive funding can signal turning points.
+
+### 10. **Network Metrics (for BTC)**
+- **What**: Hash rate, miner flows, NVT ratio.
+- **Use**: Signals changes in network health or long-term value.
+
+---
+
+## 🚀 Suggested Strategy Evolution
+
+1. **Combine Metrics**: Use multi-factor signals (e.g., RSI + MACD + OBV).
+2. **Backtest Each Metric**: Use the structure you built already to test each factor.
+3. **Portfolio View**: Incorporate MTPLF and MSTR responses to BTC indicators.
+4. **Weighting Signals**: Consider ensemble voting or scoring systems.
+
+---
+
+## Summary
+
+| Category        | Metrics to Try                      |
+|----------------|-------------------------------------|
+| Momentum        | MACD, Stochastic, RSI              |
+| Trend Strength  | ADX, Bollinger Bands               |
+| Volume-Based    | OBV, Volume MA                     |
+| Crypto-Specific | Funding Rates, NVT, Hash Rate      |
+| Advanced        | ML features, Sentiment, Lagged Stats|
+
+Exploring these metrics will make your strategy more robust and possibly more profitable, especially as markets evolve.
+
