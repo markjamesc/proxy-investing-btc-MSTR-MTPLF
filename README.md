@@ -1,29 +1,61 @@
-# Bitcoin Proxy Strategy with R and ChatGPT
+# 📊 Bitcoin Proxy RSI Strategy — Beginner Project Using R & ChatGPT
 
-This project explores a proxy investment strategy using equities that serve as leveraged vehicles for Bitcoin exposure. Specifically, we focus on:
+## 🗓️ Built in One Day from Scratch
 
-- **MSTR (MicroStrategy)** – The flagship corporate Bitcoin proxy
-- **MTPLF (Metaplanet Inc.)** – A high-beta Japanese equivalent dubbed the "MicroStrategy of Japan"
+Someone casually asked me to “look into” two companies — **MicroStrategy (MSTR)** and **Metaplanet Inc. (MTPLF)**.
 
-Rather than holding Bitcoin directly, the strategy uses technical signals, correlation analysis, and AI-augmented narrative tracking to identify when to enter or exit proxy stocks.
+I had no prior trading experience. But I used that suggestion as a launchpad.
 
-## 🔧 Tools Used
+With **ChatGPT as my research and coding assistant**, I figured out that these two companies are often treated as **proxy assets for Bitcoin** (because they hold BTC on their balance sheets).
 
-- **R**: for RSI, EMA, price correlation, and backtesting
-- **ChatGPT**: for narrative monitoring, sentiment synthesis, and thesis generation
+From that insight, I built this entire analysis pipeline using **R** — in a single day.
 
-## 📁 Project Structure
+---
 
-| Folder      | Purpose                                         |
-|-------------|--------------------------------------------------|
-| `data/`     | Contains historical or simulated asset prices    |
-| `R/`        | All analysis scripts for signal generation and charts |
-| `gpt/`      | Prompt templates and narrative summaries         |
-| `notebooks/`| Optional Quarto or R Markdown dashboards         |
+## 💡 What I Built
 
-## 🧠 Skills Demonstrated
+A **Bitcoin RSI strategy** that checks for “ENTRY” and “EXIT” signals and tracks how those signals would have performed if followed — not just for Bitcoin, but also for MSTR and MTPLF.
 
-- Financial signal detection
-- Quantitative analysis in R
-- AI-assisted narrative and thesis monitoring
-- Portfolio-level reasoning using proxies
+---
+
+## 🛠️ Tools & Workflow
+
+**Tools:** R, tidyverse, TTR, lubridate, writexl, ChatGPT  
+**Assets Analyzed:**
+- 🪙 BTC (from CoinGecko)
+- 📈 MSTR (MicroStrategy – USD stock)
+- 🇯🇵 MTPLF (Metaplanet – JPY stock, from Yahoo Japan)
+
+**What I Did:**
+1. Fetched, cleaned, and aligned historical price data
+2. Calculated **RSI** for Bitcoin
+3. Defined entry/exit logic (RSI < 40 → ENTRY; RSI > 70 → EXIT)
+4. Backtested the strategy using real BTC prices
+5. Measured % returns and holding periods between signals
+
+---
+
+## 📂 Files in This Repo
+
+| File | Description |
+|------|-------------|
+| `BTC_CoinGecko.xlsx` | Raw BTC price data from CoinGecko |
+| `BTC_MSTR_MTPLF_Merged.xlsx` | Merged BTC, MSTR, and MTPLF (including market cap & volume) |
+| `BTC_MSTR_MTPLF_Clean.xlsx` | Cleaned dataset with just BTC, MSTR, MTPLF prices |
+| `BTC_Signals.xlsx` | RSI values + ENTRY/EXIT signals |
+| `BTC_RSI_Backtest.xlsx` | Backtest results for BTC, MSTR, and MTPLF based on RSI signals |
+
+---
+
+## 🧠 Why This Matters to Me
+
+I didn’t build this because I’m a trader. I built this because I’m a **data analyst** and I wanted to see how far I could go in a single day using:
+- Real market data
+- AI assistance (ChatGPT)
+- My own drive to build something concrete
+
+This project shows what happens when you follow a simple idea, leverage the tools around you, and just **start**.
+
+---
+
+⚠️ **Disclaimer:** This is not financial advice. This is a learning project.
