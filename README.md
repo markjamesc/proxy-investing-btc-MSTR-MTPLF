@@ -37,6 +37,8 @@ A **Bitcoin RSI strategy** that checks for “ENTRY” and “EXIT” signals an
 
 ## 📂 Files in This Repo
 
+### 📁 Data Files
+
 | File | Description |
 |------|-------------|
 | `BTC_CoinGecko.xlsx` | Raw BTC price data from CoinGecko |
@@ -44,6 +46,14 @@ A **Bitcoin RSI strategy** that checks for “ENTRY” and “EXIT” signals an
 | `BTC_MSTR_MTPLF_Clean.xlsx` | Cleaned dataset with just BTC, MSTR, MTPLF prices |
 | `BTC_Signals.xlsx` | RSI values + ENTRY/EXIT signals |
 | `BTC_RSI_Backtest.xlsx` | Backtest results for BTC, MSTR, and MTPLF based on RSI signals |
+
+### 📁 Script Files
+
+| Script | Purpose |
+|--------|---------|
+| `01_merge_data.R` | Reads and merges raw BTC, MSTR, and MTPLF files |
+| `02_generate_signals.R` | Calculates RSI and labels each row as ENTRY, EXIT, or NA |
+| `03_backtest_signals.R` | Pairs ENTRY and EXIT signals and calculates returns for BTC, MSTR, MTPLF |
 
 ---
 
@@ -59,3 +69,4 @@ This project shows what happens when you follow a simple idea, leverage the tool
 ---
 
 ⚠️ **Disclaimer:** This is not financial advice. This is a learning project.
+
