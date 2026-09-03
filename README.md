@@ -1,72 +1,65 @@
-# 📊 Bitcoin Proxy RSI Strategy — Beginner Project Using R & ChatGPT
+# Bitcoin Proxy RSI Strategy — Legacy Project
 
-## 🗓️ Built in One Day from Scratch
+This repository preserves an earlier one-day R analysis of Bitcoin, MicroStrategy (MSTR), and Metaplanet (MTPLF). It is retained to show the starting point from which the later, decision-focused portfolio analysis was rebuilt.
 
-Someone casually asked me to “look into” two companies — **MicroStrategy (MSTR)** and **Metaplanet Inc. (MTPLF)**.
+> **Current version:** [AI-Augmented Bitcoin Proxy Analysis](https://github.com/markjamesc/ai-augmented-bitcoin-proxy-analysis)
 
-I had no prior trading experience. But I used that suggestion as a launchpad.
+The current project expands the comparison to six companies, models value per diluted common share, incorporates capital-structure and execution risks, validates 18 company-scenario observations, and produces an employer-facing report and presentation.
 
-With **ChatGPT as my research and coding assistant**, I figured out that these two companies are often treated as **proxy assets for Bitcoin** (because they hold BTC on their balance sheets).
+## Original project objective
 
-From that insight, I built this entire analysis pipeline using **R** — in a single day.
+The original analysis asked how a simple Bitcoin RSI entry/exit rule would have performed not only for Bitcoin but also for two Bitcoin-sensitive public equities.
 
----
+## Workflow
 
-## 💡 What I Built
+1. Fetch, clean, and align historical price data.
+2. Calculate Bitcoin RSI.
+3. Label observations as entry, exit, or neutral.
+4. Pair entry and exit signals.
+5. Compare returns and holding periods across BTC, MSTR, and MTPLF.
 
-A **Bitcoin RSI strategy** that checks for “ENTRY” and “EXIT” signals and tracks how those signals would have performed if followed — not just for Bitcoin, but also for MSTR and MTPLF.
+The signal rule used in this learning project was:
 
----
+- RSI below 40: entry
+- RSI above 70: exit
 
-## 🛠️ Tools & Workflow
+## Stack
 
-**Tools:** R, tidyverse, TTR, lubridate, writexl, ChatGPT  
-**Assets Analyzed:**
-- 🪙 BTC (from CoinGecko)
-- 📈 MSTR (MicroStrategy – USD stock)
-- 🇯🇵 MTPLF (Metaplanet – JPY stock, from Yahoo Japan)
+- R
+- tidyverse
+- TTR
+- lubridate
+- writexl
+- ChatGPT-assisted research and coding
 
-**What I Did:**
-1. Fetched, cleaned, and aligned historical price data
-2. Calculated **RSI** for Bitcoin
-3. Defined entry/exit logic (RSI < 40 → ENTRY; RSI > 70 → EXIT)
-4. Backtested the strategy using real BTC prices
-5. Measured % returns and holding periods between signals
+## Repository contents
 
----
-
-## 📂 Files in This Repo
-
-### 📁 Data Files
-
-| File | Description |
-|------|-------------|
-| `BTC_CoinGecko.xlsx` | Raw BTC price data from CoinGecko |
-| `BTC_MSTR_MTPLF_Merged.xlsx` | Merged BTC, MSTR, and MTPLF (including market cap & volume) |
-| `BTC_MSTR_MTPLF_Clean.xlsx` | Cleaned dataset with just BTC, MSTR, MTPLF prices |
-| `BTC_Signals.xlsx` | RSI values + ENTRY/EXIT signals |
-| `BTC_RSI_Backtest.xlsx` | Backtest results for BTC, MSTR, and MTPLF based on RSI signals |
-
-### 📁 Script Files
+### R scripts
 
 | Script | Purpose |
-|--------|---------|
-| `01_merge_data.R` | Reads and merges raw BTC, MSTR, and MTPLF files |
-| `02_generate_signals.R` | Calculates RSI and labels each row as ENTRY, EXIT, or NA |
-| `03_backtest_signals.R` | Pairs ENTRY and EXIT signals and calculates returns for BTC, MSTR, MTPLF |
+|---|---|
+| [`R/01_merge_data.R`](R/01_merge_data.R) | Merge and align BTC, MSTR, and MTPLF source data |
+| [`R/02_generate_signals.R`](R/02_generate_signals.R) | Calculate RSI and create entry/exit labels |
+| [`R/03_backtest_signals.R`](R/03_backtest_signals.R) | Pair signals and calculate asset returns |
 
----
+### Data and outputs
 
-## 🧠 Why This Matters to Me
+| File | Purpose |
+|---|---|
+| [`data/BTC_CoinGecko.csv`](data/BTC_CoinGecko.csv) | Historical BTC data |
+| [`data/BTC_MSTR_MTPLF_Merged.csv`](data/BTC_MSTR_MTPLF_Merged.csv) | Aligned multi-asset dataset |
+| [`data/BTC_MSTR_MTPLF_Clean.csv`](data/BTC_MSTR_MTPLF_Clean.csv) | Clean analysis dataset |
+| [`data/BTC_Signals.csv`](data/BTC_Signals.csv) | RSI and signal labels |
+| [`data/BTC_RSI_Backtest.xlsx`](data/BTC_RSI_Backtest.xlsx) | Backtest output |
 
-I didn’t build this because I’m a trader. I built this because I’m a **data analyst** and I wanted to see how far I could go in a single day using:
-- Real market data
-- AI assistance (ChatGPT)
-- My own drive to build something concrete
+## Why this repository remains public
 
-This project shows what happens when you follow a simple idea, leverage the tools around you, and just **start**.
+This project documents an earlier stage of the portfolio. It demonstrates rapid learning and modular R scripting, while the rebuilt project demonstrates the more mature standard: decision framing, benchmark selection, scenario design, dilution-aware modeling, reproducible validation, explicit uncertainty, and proportionate recommendation.
 
----
+## Limitations
 
-⚠️ **Disclaimer:** This is not financial advice. This is a learning project.
+- The RSI thresholds were not tuned or independently validated.
+- The analysis does not model transaction costs, taxes, liquidity, or slippage.
+- A signal derived from Bitcoin is applied to proxy equities without establishing that it is optimal for those securities.
+- The project is educational and is not investment advice.
 
