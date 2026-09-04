@@ -4,7 +4,7 @@ This repository preserves an earlier one-day R analysis of Bitcoin, MicroStrateg
 
 > **Current version:** [AI-Augmented Bitcoin Proxy Analysis](https://github.com/markjamesc/ai-augmented-bitcoin-proxy-analysis)
 
-The current project expands the comparison to six companies, models value per diluted common share, incorporates capital-structure and execution risks, validates 18 company-scenario observations, and produces an employer-facing report and presentation.
+The current project expands the comparison to six companies, models value per diluted common share, incorporates capital-structure and execution risks, records internal checks across 18 company-scenario observations, and produces an employer-facing report and presentation.
 
 ## Original project objective
 
